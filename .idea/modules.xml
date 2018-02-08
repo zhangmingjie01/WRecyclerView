@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BaseQuickAdapter/BaseQuickAdapter.iml" filepath="$PROJECT_DIR$/BaseQuickAdapter/BaseQuickAdapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/BaseRecyclerAdapter.iml" filepath="$PROJECT_DIR$/BaseRecyclerAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WRecyclerView.iml" filepath="$PROJECT_DIR$/WRecyclerView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
