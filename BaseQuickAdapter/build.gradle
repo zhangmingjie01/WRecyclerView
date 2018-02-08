@@ -1,16 +1,16 @@
 apply plugin: 'com.android.library'
-version = "1.0.0"
+apply plugin: 'com.github.dcendents.android-maven'
+group = "com.github.zhangmingjie01"
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.1"
-    //resourcePrefix "adapter"    //这个随便填
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 24
         versionCode 1
-        versionName "1.0"
+        versionName "2.0.0"
     }
     buildTypes {
         release {
@@ -22,11 +22,8 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.1'
     provided 'com.android.support:recyclerview-v7:24.2.1'
 }
 
-def siteUrl = 'https://github.com/HpWens/BaseRecyclerAdapter' // 项目的主页
-def gitUrl = 'https://github.com/HpWens/BaseRecyclerAdapter.git' // Git仓库的url
-group = "com.github.baserecycleradapter" // Maven Group ID for the artifact，一般填你唯一的包名
+
