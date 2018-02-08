@@ -3,6 +3,7 @@ package com.github.baserecycleradapter.activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -44,8 +45,15 @@ public class TaoBaoActivity extends AppCompatActivity implements View.OnClickLis
 
         mRecyclerView.setAdapter(mAdapter = new BaseQuickAdapter<String, BaseViewHolder>(getDatas(), new int[]{R.layout.layout_linear, R.layout.layout_grid}) {
             @Override
-            protected void convert(BaseViewHolder helper, String item) {
+            protected void convert(final BaseViewHolder helper, String item) {
                 helper.setText(R.id.tv_name, item);
+                helper.setOnClickListener(R.id.iv_photo, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Snackbar.make(view, "your click item" + helper.getAdapterPosition(), Snackbar.LENGTH_SHORT).show();
+
+                    }
+                });
             }
         });
 
